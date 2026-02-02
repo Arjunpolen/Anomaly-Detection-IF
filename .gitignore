@@ -1,0 +1,12 @@
+.DS_Store
+venv/
+source/venv/
+__pycache__/
+*.pyc
+results/plots/*.png
+results/summary.json
+data/X_processed.csv
+data/predictions.csv
+data/scores.csv
+data/y.csv
+data/uploads/

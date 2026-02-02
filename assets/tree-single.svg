@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <rect width="640" height="420" fill="#ffffff"/>
+  <g stroke="#d6dde8" stroke-width="2" fill="none">
+    <path d="M320 40 L200 120"/>
+    <path d="M320 40 L440 120"/>
+    <path d="M200 120 L120 200"/>
+    <path d="M200 120 L280 200"/>
+    <path d="M440 120 L360 200"/>
+    <path d="M440 120 L520 200"/>
+    <path d="M120 200 L80 280"/>
+    <path d="M120 200 L160 280"/>
+    <path d="M280 200 L240 280"/>
+    <path d="M280 200 L320 280"/>
+    <path d="M360 200 L340 280"/>
+    <path d="M360 200 L400 280"/>
+    <path d="M520 200 L480 280"/>
+    <path d="M520 200 L560 280"/>
+  </g>
+  <g fill="#111827">
+    <circle cx="320" cy="40" r="6"/>
+    <circle cx="200" cy="120" r="5"/>
+    <circle cx="440" cy="120" r="5"/>
+    <circle cx="120" cy="200" r="4"/>
+    <circle cx="280" cy="200" r="4"/>
+    <circle cx="360" cy="200" r="4"/>
+    <circle cx="520" cy="200" r="4"/>
+    <circle cx="80" cy="280" r="3"/>
+    <circle cx="160" cy="280" r="3"/>
+    <circle cx="240" cy="280" r="3"/>
+    <circle cx="320" cy="280" r="3"/>
+    <circle cx="340" cy="280" r="3"/>
+    <circle cx="400" cy="280" r="3"/>
+    <circle cx="480" cy="280" r="3"/>
+    <circle cx="560" cy="280" r="3"/>
+  </g>
+  <g stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M320 40 L200 120 L120 200 L80 280" stroke="#ef4444"/>
+    <path d="M320 40 L440 120 L360 200 L340 280" stroke="#2563eb"/>
+  </g>
+  <text x="20" y="400" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" fill="#6b7280">
+    (a) Single tree with anomaly (red) and nominal (blue) paths
+  </text>
+</svg>
