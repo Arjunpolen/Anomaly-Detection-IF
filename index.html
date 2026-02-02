@@ -34,9 +34,10 @@
           <p class="eyebrow">Professional • Data Structure Visuals</p>
           <h1>Visualize how isolation isolates anomalies, step by step.</h1>
           <p class="lead">
-            This UI showcases model behavior with a clean, diagram-first layout. The
-            isolation tree is front-and-center, followed by model performance plots
-            and a results dashboard that can be deployed as a static site.
+            This UI showcases model behavior with a clean, diagram-first layout.
+            The isolation tree is front-and-center, followed by model
+            performance plots and a results dashboard that can be deployed as a
+            static site.
           </p>
           <div class="hero-actions">
             <button class="primary">View Results</button>
@@ -60,15 +61,15 @@
             <div class="insight-card">
               <h3>Expected Score Geometry</h3>
               <p>
-                For isotropic data, anomaly scores should increase smoothly with distance
-                from the center, producing near-circular contours.
+                For isotropic data, anomaly scores should increase smoothly with
+                distance from the center, producing near-circular contours.
               </p>
             </div>
             <div class="insight-card">
               <h3>Why Artifacts Appear</h3>
               <p>
-                Standard Isolation Forest uses axis-aligned splits, which can create
-                rectangular low-score bands and ghost clusters.
+                Standard Isolation Forest uses axis-aligned splits, which can
+                create rectangular low-score bands and ghost clusters.
               </p>
             </div>
             <div class="insight-card">
@@ -86,7 +87,11 @@
             <span class="pill">2026</span>
           </div>
           <div class="panel-body">
-            <img id="dashboardImage" src="results/plots/dashboard.png" alt="Dashboard" />
+            <img
+              id="dashboardImage"
+              src="results/plots/dashboard.png"
+              alt="Dashboard"
+            />
           </div>
         </div>
       </section>
@@ -94,7 +99,10 @@
       <section class="data" id="data">
         <div class="section-head">
           <h2>Upload CSV Data</h2>
-          <p>Drop a CSV file to summarize features and run detection in the background.</p>
+          <p>
+            Drop a CSV file to summarize features and run detection in the
+            background.
+          </p>
         </div>
         <div class="data-grid">
           <div class="uploader" id="uploader">
@@ -103,9 +111,13 @@
               <h3>Drag & drop your CSV</h3>
               <p>or click to browse. Max 5MB recommended.</p>
               <input type="file" id="csvInput" accept=".csv" />
-              <button class="ghost" id="uploadBtn" type="button">Upload CSV</button>
+              <button class="ghost" id="uploadBtn" type="button">
+                Upload CSV
+              </button>
               <button class="ghost" id="sampleBtn">Load Sample</button>
-              <button class="primary" id="showResultsBtn" type="button">Show Results</button>
+              <button class="primary" id="showResultsBtn" type="button">
+                Show Results
+              </button>
               <p class="muted" id="uploadStatusText">No file loaded.</p>
             </div>
           </div>
@@ -144,15 +156,17 @@
           <div class="note-card compact">
             <h3>Training & Scoring</h3>
             <p>
-              Each tree selects a random feature and threshold, splitting data until
-              points are isolated. Shorter average path length implies higher anomaly.
+              Each tree selects a random feature and threshold, splitting data
+              until points are isolated. Shorter average path length implies
+              higher anomaly.
             </p>
           </div>
           <div class="note-card compact">
             <h3>Label-Aware Metrics</h3>
             <p>
-              If your CSV includes a label column, the app computes confusion matrix
-              and ROC. Otherwise, it focuses on unsupervised score distributions.
+              If your CSV includes a label column, the app computes confusion
+              matrix and ROC. Otherwise, it focuses on unsupervised score
+              distributions.
             </p>
           </div>
         </div>
@@ -161,39 +175,55 @@
       <section class="tree" id="tree">
         <div class="section-head">
           <h2>Isolation Tree</h2>
-          <p>Structured like a data structure diagram, showing splits and isolation depth.</p>
+          <p>
+            Structured like a data structure diagram, showing splits and
+            isolation depth.
+          </p>
         </div>
         <div class="tree-grid">
           <div class="tree-visuals">
             <figure class="tree-figure">
-              <img src="assets/tree-single.svg" alt="Single isolation tree with anomaly and nominal paths" />
-              <figcaption>Single tree with a fast anomaly path and a deeper nominal path.</figcaption>
+              <img
+                src="assets/tree-single.svg"
+                alt="Single isolation tree with anomaly and nominal paths"
+              />
+              <figcaption>
+                Single tree with a fast anomaly path and a deeper nominal path.
+              </figcaption>
             </figure>
             <figure class="tree-figure">
-              <img src="assets/forest-radial.svg" alt="Forest view where each radial line is a tree" />
-              <figcaption>Forest view where each radial line represents one tree in the ensemble.</figcaption>
+              <img
+                src="assets/forest-radial.svg"
+                alt="Forest view where each radial line is a tree"
+              />
+              <figcaption>
+                Forest view where each radial line represents one tree in the
+                ensemble.
+              </figcaption>
             </figure>
           </div>
           <div class="tree-notes">
             <div class="note-card">
               <h3>Random Branching</h3>
               <p>
-                Each tree chooses a random feature and a random cutoff, splitting points
-                left/right until isolation or a depth limit is reached.
+                Each tree chooses a random feature and a random cutoff,
+                splitting points left/right until isolation or a depth limit is
+                reached.
               </p>
             </div>
             <div class="note-card">
               <h3>Depth to Score</h3>
               <p>
-                Scores are derived from the average depth a point reaches across many trees,
-                normalized by expected search depth.
+                Scores are derived from the average depth a point reaches across
+                many trees, normalized by expected search depth.
               </p>
             </div>
             <div class="note-card">
               <h3>Axis-Aligned Artifacts</h3>
               <p>
-                Because splits are vertical or horizontal, bands and ghost clusters can appear,
-                especially in structured datasets like sinusoidal patterns.
+                Because splits are vertical or horizontal, bands and ghost
+                clusters can appear, especially in structured datasets like
+                sinusoidal patterns.
               </p>
             </div>
           </div>
@@ -203,14 +233,21 @@
       <section class="results" id="results">
         <div class="section-head">
           <h2>Results Gallery</h2>
-          <p>Clean, publication-style visuals for your report and live deployment.</p>
+          <p>
+            Clean, publication-style visuals for your report and live
+            deployment.
+          </p>
         </div>
         <p class="label-note" id="labelNote" hidden>
-          Upload a CSV with a label column (e.g. label/class/target) to enable Confusion Matrix & ROC.
+          Upload a CSV with a label column (e.g. label/class/target) to enable
+          Confusion Matrix & ROC.
         </p>
         <div class="gallery" id="gallery">
           <figure data-plot="confusion_matrix">
-            <img src="results/plots/confusion_matrix.png" alt="Confusion matrix" />
+            <img
+              src="results/plots/confusion_matrix.png"
+              alt="Confusion matrix"
+            />
             <figcaption>Confusion Matrix</figcaption>
           </figure>
           <figure data-plot="roc_curve">
@@ -218,11 +255,17 @@
             <figcaption>ROC Curve</figcaption>
           </figure>
           <figure data-plot="score_distribution">
-            <img src="results/plots/score_distribution.png" alt="Score distribution" />
+            <img
+              src="results/plots/score_distribution.png"
+              alt="Score distribution"
+            />
             <figcaption>Score Distribution</figcaption>
           </figure>
           <figure data-plot="metrics_snapshot">
-            <img src="results/plots/metrics_snapshot.png" alt="Metrics snapshot" />
+            <img
+              src="results/plots/metrics_snapshot.png"
+              alt="Metrics snapshot"
+            />
             <figcaption>Metrics Snapshot</figcaption>
           </figure>
         </div>
@@ -230,26 +273,31 @@
           <div class="note-card compact">
             <h3>Score Maps</h3>
             <p>
-              In ideal cases, score contours are smooth and symmetric. Rectangular bands
-              signal axis-aligned artifacts that can mask true anomalies.
+              In ideal cases, score contours are smooth and symmetric.
+              Rectangular bands signal axis-aligned artifacts that can mask true
+              anomalies.
             </p>
           </div>
           <div class="note-card compact">
             <h3>Interpretation</h3>
             <p>
-              Use ROC/Confusion Matrix when labels exist, and rely on distribution plots
-              to inspect separation between nominal and anomalous points.
+              Use ROC/Confusion Matrix when labels exist, and rely on
+              distribution plots to inspect separation between nominal and
+              anomalous points.
             </p>
           </div>
         </div>
         <div class="references">
           <h3>References</h3>
-          <a href="https://www.computer.org/csdl/journal/tk/2021/04/08888179/1ezPj2fNKk8" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.computer.org/csdl/journal/tk/2021/04/08888179/1ezPj2fNKk8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             IEEE TKDE: Extended Isolation Forest (2021)
           </a>
         </div>
       </section>
-
     </main>
 
     <footer class="site-footer">
@@ -266,7 +314,9 @@
     <div class="lightbox" id="lightbox" aria-hidden="true">
       <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
       <div class="lightbox-content" role="dialog" aria-modal="true">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+          ×
+        </button>
         <img id="lightboxImage" alt="Expanded result" />
         <p id="lightboxCaption"></p>
       </div>
