@@ -149,7 +149,7 @@ The following numbers are from the most recent pipeline run in `results/summary.
 - **API base URL (deployment):** set in `config.js` as `window.API_BASE_URL`.
 - **Contamination (expected anomaly rate):** set in `source/run_pipeline.py` as `contamination=0.5`.
   - This is the assumed fraction of anomalies in your data.
-  - If your dataset has fewer anomalies, reduce this number.
+  - If your dataset has fewer anomalies, reduce this number. .....
 
 ---
 
